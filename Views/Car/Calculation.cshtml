@@ -1,0 +1,24 @@
+﻿@model DT102GMoment2.Models.CarWash
+
+@{
+    ViewData["Title"] = "Calculation";
+}
+
+<h1>Calculation</h1>
+
+<div>
+    <h4>CarWash</h4>
+    <hr />
+
+    <partial name="CarWashSummary" for=@Model>
+</div>
+
+<p>Tvätta bilen och gör sedan bedömning hur ren bilen blev.</p>
+<div>
+    @Html.ActionLink("Gör en bedömning", "bedomning") &nbsp;
+    <a asp-action="Index">Back to List</a>
+</div>
+
+<script>
+    window.scrollTo(0, document.body.offsetHeight)
+</script>

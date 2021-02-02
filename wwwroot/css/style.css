@@ -1,0 +1,282 @@
+﻿/**********************************************************/
+/*                  General styling                       */
+/*********************************************************/
+body {
+    background-color: #e4e4e4;
+    line-height: 1.6;
+    font-family: 'Open Sans', 'Roboto', 'Helvetica', 'sans-serif';
+    font-size: 1.3em;
+}
+
+label {
+    font-weight: 600;
+}
+
+.header-poster
+{
+    width:100%;
+}
+
+h1 {
+    font-size: 1.65em;
+    text-align: center;
+    margin-top: 0.8em;
+}
+
+h2 {
+    font-size: 1.5em;
+}
+
+h3 {
+    font-size: 1.2em;
+}
+
+h4 {
+    font-size: 1.15em;
+}
+
+
+.border {
+    border: 1px solid #000;
+}
+
+.padding-15 {
+    padding: 1em;
+}
+
+
+.padding-15lr {
+    padding: 0 0.5em;
+}
+
+
+.marg-right-20 {
+    margin-right: 20px;
+}
+
+.marg-right-10 {
+    margin-right: 10px;
+}
+
+
+.margin-btm-15 {
+    margin-bottom: 15px;
+}
+
+.padd-bot-10 {
+    padding-bottom: 10px;
+}
+
+.padd-top-16 {
+    padding-top: 1em;
+}
+
+.padding-16-lr {
+    padding: 0 1em;
+}
+
+.wth-30 {
+    flex-basis: 30%;
+}
+
+.flex {
+    display: flex;
+}
+
+.button {
+    background-color: #007cc1;
+    color: white;
+    padding: 5px;
+    border: none;
+    cursor: pointer;
+    font-size: 1.15em;
+    margin-top: 0.5em;
+}
+
+.btn-as-link {
+    background: none !important;
+    border: none;
+    padding: 0 !important;
+    /*optional*/
+    font-family: arial, sans-serif;
+    /*input has OS specific font-family*/
+    color: #069;
+    text-decoration: underline;
+    cursor: pointer;
+    font-size: 1em;
+    margin-bottom: 1em;
+}
+
+
+.button--flex-1 {
+    flex: 1;
+    margin-right: 10px;
+}
+
+.button--width-50 {
+    width: 50%;
+}
+
+.red-button {
+    background-color: #E22C18;
+}
+
+.zero {
+    padding: 0;
+    margin: 0;
+}
+
+.center {
+    text-align: center;
+}
+
+
+.button--fullwidth, .credentials__form__rad--full {
+    width: 100%;
+}
+
+.button--search {
+    margin-top: 0;
+    cursor: pointer;
+    /* float:none;  */
+    /* margin-left: -6px; */
+}
+
+address {
+    font-style: normal;
+}
+
+.clear {
+    clear: both;
+}
+
+legend {
+    font-weight: bold;
+}
+
+input[type=text],
+textarea,
+input[type=password] {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #000;
+    box-sizing: border-box;
+    resize: vertical;
+    font-size: 1.10em;
+}
+
+.logo {
+    margin-left: 5px;
+}
+
+.header {
+    margin: 0 auto;
+    background-color: #007cc1;
+    margin-bottom: 5px;
+    justify-content: space-between;
+    padding-top: 0.5em;
+}
+
+#toggle-menu {
+    height: 70%;
+    display: none;
+    outline: none;
+    border: none;
+}
+
+.header-line {
+    display: flex;
+}
+
+.header-line__left, .header-line__right {
+    flex: 1;
+}
+
+a {
+    color: #007bbd;
+}
+
+
+
+/**********************************************************/
+/*                   Container styling                   */
+/*********************************************************/
+.wrapper {
+    max-width: 1280px;
+    margin: 0 auto;
+    background-color: #fff;
+    overflow: hidden;
+    padding-bottom: 20px;
+}
+
+
+
+
+/**********************************************************/
+/*                   Navigering                          */
+/*********************************************************/
+.nav {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 0.5em;
+    padding: 0.6em 0; /* tony */
+}
+
+.nav__area {
+    margin: 0;
+    padding: 0;
+}
+
+.nav__li {
+    display: inline-block;
+    padding: 0;
+    padding-right: 0.8em;
+}
+
+.nav__a {
+    text-decoration:underline;
+}
+
+.nav__li__img {
+    padding-right: 0.15em;
+    vertical-align: middle;
+    margin-bottom: 4px;
+}
+
+.nav__a--active-link {
+    padding: 0.5em;
+    border-bottom: 5px solid #000;
+}
+
+
+.booking__wth-100__img {
+    margin-top: 15px;
+    text-align: center;
+}
+
+.wth-100 {
+    flex-basis: 100%;
+    background-color: #f8ffff;
+}
+
+.wth-40 {
+    flex-basis: 40%;
+    background-color: #f8ffff;
+}
+
+.wth-25 {
+    flex-basis: 25%;
+}
+
+input[type=date],
+input[type=time] {
+    width: 100%;
+    height: 60px;
+    font-size: 1.15em;
+    padding: 0 0.5em;
+    font-family: 'Open Sans', 'Roboto', 'Helvetica', 'sans-serif';
+    border: 1px solid #e3e3e3;
+    box-sizing: border-box;
+}
+
+

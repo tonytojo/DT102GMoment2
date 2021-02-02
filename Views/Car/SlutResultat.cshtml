@@ -1,0 +1,27 @@
+﻿@model DT102GMoment2.Models.CarWash
+
+@{
+    ViewData["Title"] = "SlutResultat";
+}
+
+<h1>SlutResultat</h1>
+
+<p>Den totala tvättiden blir @ViewData["washtime"]</p>
+
+@foreach (var item in Model.timeUnit)
+{
+    <p>@item.Key tog @item.Value</p>
+}
+
+
+<div>
+    <h4>CarWash</h4>
+    <hr />
+
+    <partial name="CarWashSummary" for=@Model>
+
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>

@@ -1,0 +1,33 @@
+﻿@model IEnumerable<SelectListItem>
+@{
+    ViewData["Title"] = "Bedomning";
+}
+
+<h2>Bedöm tvättresultatet</h2>
+<p>Blev bilen ren nu?</p>
+
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Betyg" method="post">
+            <div class="form-group">
+                @foreach (var item in Model)
+                {
+                    <input type="radio" name="Betyg" value="@Html.DisplayFor(Model => item.Value)"> @item.Text <br />
+                }
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Utvärdera" class="btn btn-default button" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Börja om</a>
+</div>
+
+<script>
+    window.scrollTo(0, document.body.offsetHeight)
+</script>

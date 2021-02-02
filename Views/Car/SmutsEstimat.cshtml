@@ -1,0 +1,68 @@
+﻿@model DT102GMoment2.Models.Multiple
+
+@{
+    ViewData["Title"] = "SmutsEstimat";
+    Model.Data.Date = DateTime.Now;
+}
+
+<h1>SmutsEstimat</h1>
+
+<h4>CarWash</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Calculation">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="@Model.Dirty" class="control-label"></label>
+                <select asp-for="@Model.Data.Grad" autofocus asp-items="@Model.Dirty" class="form-control">
+                </select>
+            </div>
+            <div class="form-group">
+                <label asp-for="@Model.Data.Regnr" class="control-label"></label>
+                <input asp-for="@Model.Data.Regnr" class="form-control" />
+                <span asp-validation-for="@Model.Data.Regnr" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="@Model.Data.Name" class="control-label"></label>
+                <input asp-for="@Model.Data.Name" class="form-control" />
+                <span asp-validation-for="@Model.Data.Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="@Model.Data.Date" class="control-label"></label>
+                <input asp-for="@Model.Data.Date" class="form-control" />
+                <span asp-validation-for="@Model.Data.Date" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="@Model.Data.SizeOfBucket" class="control-label"></label>
+                <input asp-for="@Model.Data.SizeOfBucket" class="form-control" />
+                <span asp-validation-for="@Model.Data.SizeOfBucket" class="text-danger"></span>
+            </div>
+
+
+            <div class="form-group">
+                <label>Who wash:&nbsp;</label>
+                @for (int i = 0; i < Model.Data.WhoWash.Count; i++)
+                {
+                    <input type="hidden" asp-for="@Model.Data.WhoWash[i].Value" />
+                    <input asp-for="Data.WhoWash[i].Selected" /> @Model.Data.WhoWash[i].Text
+                }
+            </div>
+
+
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
+

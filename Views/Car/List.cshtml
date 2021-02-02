@@ -1,0 +1,21 @@
+﻿@model IEnumerable<DT102GMoment2.Models.CarWash>
+
+@{
+    ViewData["Title"] = "List";
+}
+
+<h1>List</h1>
+
+<div>
+    <h2>DataOnlyCarWash</h2>
+</div>
+
+
+@foreach (var CarWash in Model)
+{
+    <partial name="CarWashSummary" model="CarWash" />
+    <hr />
+}
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
